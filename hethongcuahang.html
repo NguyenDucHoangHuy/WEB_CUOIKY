@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="../Portfolio/images/icon1.png">
+    <link rel="stylesheet" href="main_2.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+    <title>Hệ thống cửa hàng</title>
+    <style>
+        #thongtinhethong{
+            border:0.15rem solid red;
+            border-radius: 0.6rem;
+            width:100%;
+            padding-inline: 7rem ;
+            padding-block: 1.5rem;
+            text-align: center;
+        }
+        #thongtinhethong .col-4 {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+}
+        #thongtinhethong i{
+            font-size:1.8rem;
+            color: white;
+            border-radius: 50%;
+            background-color: red;
+            width: 3.7rem;
+            height:3.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #khuvuchethong .col-5{
+            background-color: rgb(248, 212, 212);
+            border-radius: 0.5rem;
+            height:68vh;
+            padding:1.1rem;
+            width: 23.5vw;
+        }
+        #tinhthanh{
+            background-color: rgb(251, 31, 31);
+            color:white;
+            width:100%;
+            height:4vh;
+            border-radius: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        #quanhuyen{
+            background-color: white;
+            color:black;
+            width:100%;
+            height:4vh;
+            border-radius: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        option{
+            background-color: white;
+            color:black;
+        }
+        .card{
+            background-color: transparent;
+        }
+        .card:hover{
+            background-color: rgb(248, 58, 58);
+            color:white;
+        }
+    </style>
+</head>
+<body id="dangnhap">
+    <section class="header bg-danger text-white">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-2 col-sm-3 pb-4 d-flex justify-content-center">
+                    <a href="trangchu.html">
+                        <img src="images_2/NDmall.png" class="img-fluid " alt="Logo">
+                    </a>
+                </div>
+                <div class="col-xl-2 col-lg-3 d-lg-flex d-none">
+                    <a href="hethongcuahang.html" id="icon-header">
+                        <i class="fa-solid fa-shop"></i>
+                     <span >Hệ thống cửa hàng<br><b class="fs-5">40 cửa hàng</b></span>
+                    </a>
+                </div>
+                <div class="col-xxl-5 col-xl-4 col-lg-3 col-sm-9">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..." 
+                        aria-label="Tìm kiếm sản phẩm..." aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+                      </div>
+                </div>
+                <div class="col-xxl-3 col-lg-4 d-lg-flex d-none align-items-center gap-3">
+                    <a href="yeuthich.html" class="position-relative" id="icon-header" >
+                        <span class="fs-4 ms-4"><i class="fa-regular fa-heart"></i></span><br>
+                        <span>Yêu thích</span>
+                    </a>
+
+                    <a href="dangnhap.html" >
+                        <div class="dropdown"  id="icon-header">
+                            <a class="dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="fs-4 ms-4"><i class="fa-regular fa-user"></i></span><br>
+                                <span>Tài khoản</span>
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="dangnhap.html">Đăng nhập</a></li>
+                                <li><a class="dropdown-item" href="dangky.html">Đăng ký</a></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="giohang.html" class="position-relative" id="icon-header">
+                        <span class="fs-4 ms-3"><i class="fa-solid fa-bag-shopping"></i></span>
+                       <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                         0
+                         <span class="visually-hidden">unread messages</span>
+                       </span><br>
+                       <span>Giỏ hàng</span>
+                     </a>
+
+                </div>
+            </div>
+        </div>
+         <hr> 
+         <div class="container">
+            <div class="row d-none d-lg-flex">
+                <div class="col">
+                    <nav class="navbar">
+                        <a href="trangchu.html" class="active">Trang chủ</a>
+                        <a href="gioithieu.html">Giới thiệu</a>
+                        <div class="dropdown">
+                        <a class="dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"  href="sanpham.html">
+                            <span> Sản phẩm </span>
+                        </a>
+                            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a href="sanpham.html">Điện thoại-Máy tính bảng</a></li><hr>
+                                <li><a href="sanpham.html">Phụ kiện-Thiết bị số</a> </li><hr>
+                                <li><a href="sanpham.html">Máy ảnh-Quay phim</a> </li><hr>
+                                <li><a href="sanpham.html">Điện gia dụng-Nhà bếp</a> </li><hr>
+                                <li><a href="sanpham.html">Laptop-Thiết bị IT</a> </li><hr>
+                                <li><a href="sanpham.html">Máy chơi game-Trò chơi</a> </li><hr>
+                                <li><a href="sanpham.html">Trang sức-Sành điệu</a> </li><hr>
+                                <li><a href="sanpham.html">Thời trang-Làm đẹp</a> </li><hr>
+                                <li><a href="sanpham.html">Nhà cửa đời sống</a> </li><hr>
+                                <li><a href="sanpham.html">Sách-Tiểu thuyết</a> </li>
+                            </ul>
+                        </div></a>
+                        <a href="yeuthich.html">Yêu thích</a>
+                        <a href="lienhe.html">Liên hệ</a>
+                        <a href="hethongcuahang.html">Hệ thống cửa hàng</a>
+                        <a href="affiliate.html">Đăng ký Affiliate</a>
+                    </nav>
+                </div>
+            </div>
+         </div>
+           
+             <div class="row px-5 py-3  fixed-bottom bg-danger d-flex d-lg-none" style="height: 6vh;">
+                <div class="col-3">
+                    <i class="fa-solid fa-bars fs-4" id="menu-icon"></i>
+                </div>
+               <div class="col-6 d-flex justify-content-between">
+                <a href="yeuthich.html">
+                    <i class="fa-regular fa-heart fs-4"></i>
+                </a>
+               <a href="hethongcuahang.html">
+                <i class="fa-solid fa-shop fs-4"></i>
+               </a>
+               <a href="dangnhap.html">
+                <i class="fa-regular fa-user fs-4"></i>
+               </a>
+               </div>
+                <div class="col-3 d-flex justify-content-end">
+                   <a href="#"> <i class="fa-solid fa-bag-shopping fs-4"></i></a>
+                </div>
+           </div>
+
+           <div class="dropleftmenu" id="dropleftmenu">
+            <ul>
+            <li><a href="trangchu.html" class="text-dark fs-6"><span>Trang chủ</span></a></li><br>
+            <li><a href="gioithieu.html" class="text-dark fs-6"><span>Giới thiệu</span></a> </li><br>
+            <li><a href="sanpham.html" class="text-dark fs-6"><span>Sản phẩm</span></a> </li><br>
+            <li><a href="yeuthich.html" class="text-dark fs-6"><span>Yêu thích</span></a> </li><br>
+            <li><a href="lienhe.html" class="text-dark fs-6"><span>Liên hệ</span></a> </li><br>
+            <li><a href="hethongcuahang.html" class="text-dark fs-6"><span>Hệ thống cửa hàng</span></a></li><br>
+            <li><a href="dangky.html" class="text-dark fs-6"><span>Đăng ký Affiliate</span></a></li>
+            </ul>
+           </div>
+   </section>
+ 
+            <!--Header-->
+
+
+   <section class="maincontent py-2">
+     <div class="container py-3">
+        <div class="row">
+            <div class="col-7">
+                <div class="row">
+                    <span class="">Trang chủ 
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span class="text-danger"> Hệ thống cửa hàng</span> 
+                    </span> 
+                </div>
+                <br>
+            </div>
+        </div>
+        
+        <div class="row" id="thongtinhethong">
+           <div class="col-4 fs-5">
+            <i class="fa-solid fa-store"></i> Hệ thống 8 cửa hàng<br><span class="me-4">Trên toàn quốc</span>
+           </div>
+           <div class="col-4 fs-5">
+            <i class="fa-solid fa-user-plus"></i> Hơn 100 nhân viên<br> Để phục vụ quý khách
+           </div>
+           <div class="col-4 fs-5">
+            <i class="fa-solid fa-clock"></i> Mở cửa 8-22h<br> cả CN & Lễ tết
+           </div>
+        </div>
+
+        <div class="row py-4 d-flex gap-5" id="khuvuchethong">
+            <div class="col-5">
+                <div class="row">
+                    <div class="col-6">
+                        <select id="tinhthanh">
+                            <option value="">Chọn tỉnh thành</option>
+                            <option value="HaNoi">Hà Nội</option>
+                            <option value="NgheAn">Nghệ An</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select id="quanhuyen">
+                            <option value="">Chọn quận, huyện</option>
+                            <option value="HaNoi">Quận Ba Đình</option>
+                            <option value="NgheAn">Quận Cầu Giấy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row px-3 py-4 d-flex flex-column gap-4">
+                    <div class="card border-danger"  style="width:21vw;" onclick="showOnMap('Hà Nội 1')">
+                        <div class="card-body">
+                          <h6 class="card-title"><b>ND Theme Hà Nội</b></h6>
+                          <h6 class="card-title"><b>Địa chỉ: </b> Tầng 6-266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình , Hà Nội</h6>
+                          <h6 class="card-title"><b>Hotline: </b> 1900 6785</h6>
+                        </div>
+                      </div>
+                       
+                      <div class="card border-danger"  style="width:21vw;"  onclick="showOnMap('Nghệ An')">
+                        <div class="card-body">
+                          <h6 class="card-title"><b>ND Theme Nghệ An</b></h6>
+                          <h6 class="card-title"><b>Địa chỉ: </b> Khối 2 , Thị Trấn Tân Lạc, Quỳ Châu , Nghệ An</h6>
+                          <h6 class="card-title"><b>Hotline: </b> 1900 6785</h6>
+                        </div>
+                      </div>
+                      <div class="card  border-danger"  style="width:21vw;" onclick="showOnMap('Hà Nội 2')">
+                        <div class="card-body">
+                          <h6 class="card-title"><b>ND Theme Hà Nội</b></h6>
+                          <h6 class="card-title"><b>Địa chỉ: </b> 165 Cầu Giấy, Ba Đình, Hà Nội</h6>
+                          <h6 class="card-title"><b>Hotline: </b> 1900 6785</h6>
+                        </div>
+                      </div>
+                   
+                </div>
+            </div>
+            
+            <div class="col-6">
+                <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7447.808543203733!2d105.815878!3d21.036516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab128d511a8d%3A0x3440d4c5d63f693!2zMjY2IFAuIMSQ4buZaSBD4bqlbiwgTGnhu4V1IEdpYWksIEJhIMSQw6xuaCwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1715157730222!5m2!1svi!2sus"
+                 width="790vw" height="630vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+                
+                    
+              
+     </div>   
+   </section>
+            <!--Maincontent-->
+
+
+
+            <section class="footer bg-dark text-white pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <h6><b>THÔNG TIN LIÊN HỆ</b></h6><br>
+                            <h8><b>Tên công ty</b></h8><br>
+                             <span>Công ty TNHH ND Mall</span><br> <br>
+                             <h8><b>Địa chỉ</b></h8><br>
+                             <span>Tòa nhà Ladeco, 266 Đội Cấn, Ba Đình, Hà Nội</span><br><br>
+                             <h8><b>Email</b></h8><br>
+                             <span>support@sapo.vn</span><br> <br>
+                             <h8><b>Hotline</b></h8><br>
+                             <span>19006758</span><br> <br>
+                             <h8><b>Thời gian hỗ trợ</b></h8><br>
+                             <span>08:30-21:30 các ngày trong tuần</span><br> <br>
+                        </div>
+                        <div class="col-2">
+                             <div class="huongdan">
+                                <h6><b>HƯỚNG DẪN</b></h6><br>
+                            <a href="trangchu.html">Trang chủ</a><br><br>
+                            <a href="gioithieu.html">Giới thiệu</a><br><br>
+                            <a href="sanpham.html">Sản phẩm</a><br><br>
+                            <a href="yeuthich.html">Yêu thích</a><br><br>
+                            <a href="lienhe.html">Liên hệ</a><br><br>
+                            <a href="hethongcuahang.html">Hệ thống cửa hàng</a><br><br> 
+                            <a href="affiliate.html">Đăng ký Affiliate</a>
+                             </div> 
+                    </div>
+                    <div class="col-3">
+                       <div class="chamsockhachhang">
+                        <h6><b>CHĂM SÓC KHÁCH HÀNG</b></h6><br>
+                        <a href="#">Các câu hỏi thường gặp</a><br><br>
+                        <a href="#">Gửi yêu cầu hỗ trợ</a><br><br>
+                        <a href="#">Đặt hàng online</a><br><br>
+                        <a href="#">Phương thức vận chuyển</a><br><br>
+                        <a href="#">Hoàn trả đơn hàng</a><br><br>
+                        <a href="#affiliate">Đăng ký Affiliate</a><br><br>
+                        <a href="#">Chính sách kiểm hàng</a>
+                       </div>
+                    </div>
+                    <div class="col-3">
+                        <h6><b>KẾT NỐI</b></h6><br>
+                        <div class="social-media fs-3">
+                            <a href="#" class="me-3"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-google"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-youtube"></i></a> 
+                          </div>
+                          <br><br>
+                        <h6><b>TẢI ỨNG DỤNG ND MALL</b></h6><br>
+                        <img src="images_2/taiungdungndmall.png" id="taiungdung">
+                        <img src="images_2/img-app-store.png" id="taiungdung">
+                    </div>
+                </div>
+                <hr>
+                    <div class="container d-flex align-items-center">
+                        <span>@ Bản quyền thuộc về ND Theme | Cung cấp bởi Sapo</span>
+                        <span class="ms-auto"><img src="images_2/NDmall.png"></span>
+                    </div>
+            
+               </section>
+
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="assets/vendors/jquery.min.js"></script>
+   <script src="assets/owlcarousel/owl.carousel.js"></script>
+   <script src="main_2.js"></script>
+</body>
+
+</html>

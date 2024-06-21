@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="../Portfolio/images/icon1.png">
+    <link rel="stylesheet" href="main_2.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+    <title>Xiaomi Mi 10T Pro</title>
+    <style>
+       #gia{
+        color:rgb(254, 64, 64);
+       }
+       #giagoc{
+        text-decoration: line-through;  
+       }
+       #khuyenmai{
+         background-color:rgb(254, 64, 64) ;
+         color:white;
+         font-weight: bold;
+         border: 0.1rem solid rgb(254, 64, 64)  ;
+         border-radius: 0.2rem;
+         font-size: 1.1rem;
+         padding:0.5rem; 
+       }
+       #soluong{
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border: 0.01rem solid rgba(128, 128, 128, 0.428);
+            width: 5.5rem;
+       }
+       .soluongsanpham {
+    display: flex;
+    align-items: center;
+    
+}
+       .soluongsanpham button{
+        font-size: 1.5rem;
+        color: rgb(254, 64, 64);
+        background-color: white;
+        border: 0.01rem solid rgba(128, 128, 128, 0.428);
+        width:2.5rem;
+        height:2.3rem;
+        margin: 0;  
+        padding: 0; 
+       }
+       .soluongsanpham button:hover{
+        color:white;
+        background-color:  rgb(254, 64, 64);
+       }
+       .form-product{
+        display: flex;
+        gap:0.7rem;
+       }
+       .form-product button{
+        height: 4rem;
+       }
+       #themgio{
+        width: 19.5rem;
+        background-color: rgb(254, 64, 64);
+        color:white;    
+        border-radius: 0.3rem;
+       }
+       #muangay{
+        width: 13rem;
+        background-color: rgb(5, 174, 16);
+        color:white;    
+        border-radius: 0.3rem;
+       }
+       #themgio:hover{
+        color:rgb(254, 64, 64);
+        background-color: white;
+        border:0.01rem solid rgb(254, 64, 64);
+       }
+       #muangay:hover{
+        color:rgb(255, 204, 0);
+        background-color: white;
+        border:0.01rem solid rgb(255, 204, 0);
+       }
+       #goituvan{
+        width: 20rem;
+        background-color: rgb(255, 179, 0); 
+        border-radius: 0.3rem;
+        color:white;    
+        height: 2.8rem;
+       }
+       #tym{
+        color:white;    
+        background-color: rgb(255, 179, 0);
+        font-size:2.2rem;
+        border-radius: 0.4rem;
+        height:2.8rem;
+        width:3.3rem;
+        display: flex;          
+        justify-content: center;
+        align-items: center;
+       }
+       .col-4 img{
+        width: 25rem;
+        cursor: pointer;
+       }
+       #thongtinhuuich{
+        background-color: rgb(240, 240, 240);
+        height:21rem;
+       }
+       #thongtinhuuich a{
+        color:black;
+       }
+       #thongtinhuuich a:hover{
+        color:rgb(255, 179, 0);
+       }
+       #cauhinh{
+        height:2.4rem;
+        width: 33rem;
+        background-color: white;
+        color:rgb(254, 64, 64);
+        border: 0.01rem solid rgb(254, 64, 64);
+        border-radius: 0.3rem;
+       }
+       #cauhinh:hover{
+        color:white;
+        background-color:rgb(254, 64, 64) ;
+       }
+       #mota{
+        color:white;
+        background-color:rgb(255, 179, 0);
+        border: 0.01rem solid rgb(255, 179, 0);
+        border-radius: 0.3rem;
+        height:2.4rem;
+        width:8rem;
+        font-weight: bold;
+       }
+       #textContainer{
+        max-height: 1rem; 
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+    #textContainer.expanded {
+        max-height: none;
+    }
+    #toggleButton{
+        color:black;
+        background-color: white;
+        border: 0.01rem solid black;
+        border-radius: 0.3rem;
+        height:2.4rem;  
+        width: 8rem;
+    }
+    #toggleButton:hover{
+        color:rgb(254, 64, 64);
+         border: 0.01rem solid rgb(254, 64, 64);
+    }
+    @media (max-width:1799px) {
+            #anhsanpham{
+                width: 100%;
+                height: auto;
+            }
+        }
+    @media (max-width:1399px) {
+            #anhsanpham{
+                width: 100%;
+                height: auto;
+            }
+            #thongtinhuuich .d-flex.gap-2{
+                a{
+                    font-size:0.85rem;
+                }
+            }
+    }
+    @media (max-width:1200px){
+        .khuvucbutton .form-product{
+            display: flex;
+            flex-direction: column;
+            gap:0.5rem !important;
+        }
+        .khuvucbutton .form-product button{
+            width:23rem !important;
+            height:3rem !important;
+        }
+        #thongtinhuuich .d-flex.gap-2{
+                i{
+                    font-size:1.2rem !important;
+                }
+                a{
+                    font-size:0.65rem;
+                }
+            }
+        #cauhinh{
+            width:29rem !important;
+        }
+    }
+        @media (max-width: 992px) {
+           #anhsanpham{
+            margin-left: 9rem !important;
+            width:60%;
+            height: auto;
+           }
+           .khuvucbutton .form-product{
+            display: flex;
+            flex-direction: row;
+            gap:0.5rem !important;
+        }
+        .khuvucbutton .form-product button{
+           padding:0.6rem;
+           height: 4rem !important;
+        }
+        .khuvucbutton{
+            padding-bottom:3rem;
+        }
+        #thongtinhuuich .d-flex.gap-2{
+                i,a{
+                    padding-top: 1rem;
+                    font-size:1rem;
+                }
+            }
+        #thongtinhuuich .d-flex.gap-2{
+            margin-left: 8rem;
+        }
+        .table.table-bordered{
+            width: 100% !important;
+        }
+        #cauhinh{
+            width:100% !important;
+        }
+        #daphop{
+            padding-top:2rem;
+        }
+        #daphop iframe{
+            width: 100% !important;
+        }
+    }
+    @media (max-width: 768px) {
+        #thongtinhuuich .d-flex.gap-2{
+            margin-left: 4rem;
+        }
+        #anhsanpham{
+            margin-left: 7rem !important;
+           }
+    }
+    @media (max-width: 576px) {
+        #thongtinhuuich .d-flex.gap-2{
+            margin-left: 2rem;
+        }
+        #anhsanpham{
+            margin-left: 4rem !important;
+           }
+    }
+
+    </style>
+
+</head>
+<body>
+    <section class="header bg-danger text-white">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-2 col-sm-3 pb-4 d-flex justify-content-center">
+                    <a href="trangchu.html">
+                        <img src="images_2/NDmall.png" class="img-fluid " alt="Logo">
+                    </a>
+                </div>
+                <div class="col-xl-2 col-lg-3 d-lg-flex d-none">
+                    <a href="hethongcuahang.html" id="icon-header">
+                        <i class="fa-solid fa-shop"></i>
+                     <span >Hệ thống cửa hàng<br><b class="fs-5">40 cửa hàng</b></span>
+                    </a>
+                </div>
+                <div class="col-xxl-5 col-xl-4 col-lg-3 col-sm-9">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..." 
+                        aria-label="Tìm kiếm sản phẩm..." aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+                      </div>
+                </div>
+                <div class="col-xxl-3 col-lg-4 d-lg-flex d-none align-items-center gap-3">
+                    <a href="yeuthich.html" class="position-relative" id="icon-header" >
+                        <span class="fs-4 ms-4"><i class="fa-regular fa-heart"></i></span><br>
+                        <span>Yêu thích</span>
+                    </a>
+
+                    <a href="dangnhap.html" >
+                        <div class="dropdown"  id="icon-header">
+                            <a class="dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="fs-4 ms-4"><i class="fa-regular fa-user"></i></span><br>
+                                <span>Tài khoản</span>
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="dangnhap.html">Đăng nhập</a></li>
+                                <li><a class="dropdown-item" href="dangky.html">Đăng ký</a></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="giohang.html" class="position-relative" id="icon-header">
+                        <span class="fs-4 ms-3"><i class="fa-solid fa-bag-shopping"></i></span>
+                       <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                         0
+                         <span class="visually-hidden">unread messages</span>
+                       </span><br>
+                       <span>Giỏ hàng</span>
+                     </a>
+
+                </div>
+            </div>
+        </div>
+         <hr> 
+         <div class="container">
+            <div class="row d-none d-lg-flex">
+                <div class="col">
+                    <nav class="navbar">
+                        <a href="trangchu.html" class="active">Trang chủ</a>
+                        <a href="gioithieu.html">Giới thiệu</a>
+                        <div class="dropdown">
+                        <a class="dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"  href="sanpham.html">
+                            <span> Sản phẩm </span>
+                        </a>
+                            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a href="sanpham.html">Điện thoại-Máy tính bảng</a></li><hr>
+                                <li><a href="sanpham.html">Phụ kiện-Thiết bị số</a> </li><hr>
+                                <li><a href="sanpham.html">Máy ảnh-Quay phim</a> </li><hr>
+                                <li><a href="sanpham.html">Điện gia dụng-Nhà bếp</a> </li><hr>
+                                <li><a href="sanpham.html">Laptop-Thiết bị IT</a> </li><hr>
+                                <li><a href="sanpham.html">Máy chơi game-Trò chơi</a> </li><hr>
+                                <li><a href="sanpham.html">Trang sức-Sành điệu</a> </li><hr>
+                                <li><a href="sanpham.html">Thời trang-Làm đẹp</a> </li><hr>
+                                <li><a href="sanpham.html">Nhà cửa đời sống</a> </li><hr>
+                                <li><a href="sanpham.html">Sách-Tiểu thuyết</a> </li>
+                            </ul>
+                        </div></a>
+                        <a href="yeuthich.html">Yêu thích</a>
+                        <a href="lienhe.html">Liên hệ</a>
+                        <a href="hethongcuahang.html">Hệ thống cửa hàng</a>
+                        <a href="affiliate.html">Đăng ký Affiliate</a>
+                    </nav>
+                </div>
+            </div>
+         </div>
+           
+             <div class="row px-5 py-3  fixed-bottom bg-danger d-flex d-lg-none" style="height: 6vh;">
+                <div class="col-3">
+                    <i class="fa-solid fa-bars fs-4" id="menu-icon"></i>
+                </div>
+               <div class="col-6 d-flex justify-content-between">
+                <a href="yeuthich.html">
+                    <i class="fa-regular fa-heart fs-4"></i>
+                </a>
+               <a href="hethongcuahang.html">
+                <i class="fa-solid fa-shop fs-4"></i>
+               </a>
+               <a href="dangnhap.html">
+                <i class="fa-regular fa-user fs-4"></i>
+               </a>
+               </div>
+                <div class="col-3 d-flex justify-content-end">
+                   <a href="#"> <i class="fa-solid fa-bag-shopping fs-4"></i></a>
+                </div>
+           </div>
+
+           <div class="dropleftmenu" id="dropleftmenu">
+            <ul>
+            <li><a href="trangchu.html" class="text-dark fs-6"><span>Trang chủ</span></a></li><br>
+            <li><a href="gioithieu.html" class="text-dark fs-6"><span>Giới thiệu</span></a> </li><br>
+            <li><a href="sanpham.html" class="text-dark fs-6"><span>Sản phẩm</span></a> </li><br>
+            <li><a href="yeuthich.html" class="text-dark fs-6"><span>Yêu thích</span></a> </li><br>
+            <li><a href="lienhe.html" class="text-dark fs-6"><span>Liên hệ</span></a> </li><br>
+            <li><a href="hethongcuahang.html" class="text-dark fs-6"><span>Hệ thống cửa hàng</span></a></li><br>
+            <li><a href="dangky.html" class="text-dark fs-6"><span>Đăng ký Affiliate</span></a></li>
+            </ul>
+           </div>
+   </section>
+ 
+            <!--Header-->
+
+
+   <section class="maincontent py-2">
+    <div class="container py-3">
+        <div class="row">
+            <span class="">Trang chủ 
+            <i class="fa-solid fa-chevron-right"></i>
+            <span class="text-danger"> Xiaomi Mi 10T Pro</span> 
+            </span> 
+        </div>
+     </div>
+     <div class="container">
+        <div class="row d-flex">
+
+            <div class="col-12 col-lg-4 mt-5 d-xl-none">
+                <img src="images_2/xiaomi-mi-10t-pro.png" class="pb-5" id="anhsanpham"> 
+            </div>
+            <div class="col-4 mt-5 d-none d-xl-flex ">
+                <img src="images_2/xiaomi-mi-10t-pro.png" class="pb-5"> 
+            </div>
+            <div class="col-12 col-lg-5">
+              <h5 class="fw-bold">Xiaomi Mi 10T Pro</h5><br>
+              <span>Thương hiệu: <b>Xiaomi</b></span> 
+              <span class="px-3"> Mã sản phẩm: <b>mi10</b></span> <br> 
+              <span class="fs-3" id="gia"><b>10.900.000₫</i></b></span> 
+              <span class="ps-5">Giá niêm yết:</span>
+              <span id="giagoc">12.500.000₫</span> <br>
+              <span class="text-success">Tiết kiệm <b>1.500.000₫</b> so với giá thị trường</span><br> <br>
+              <span id="khuyenmai" class="ms-5"><i class="fa-solid fa-gift"></i> KHUYẾN MÃI-ƯU ĐÃI</span><br><br>
+              <span class="ms-5">Tặng ngay tai nge iDot giá trị 1 triệu <br></span>
+                <span class="ms-5"> Tặng ốp lưng chống sốc<br></span>
+                <span class="ms-5"> Tặng phiếu mua hàng trị giá 2.000.000₫</span>
+                    <div class="soluongsanpham py-4">
+                        <button id="giam">-</button>
+                        <input type="text" id="soluong">
+                        <button id="tang">+</button>
+                    </div>
+                   <div class="khuvucbutton">
+                    <div class="form-product pb-2">
+                        <button id="themgio">THÊM VÀO GIỎ <br> Cam kết chính hãng / đổi trả 24h </button>
+                        <button id="muangay">MUA NGAY<br> Thanh toán nhanh</button>
+                    </div>
+                    <div class="muavang d-flex gap-2">
+                        <button id="goituvan">Gọi<b> 19006750</b> để tư vấn mua hàng</button> 
+                    <i class="fa-regular fa-heart" id="tym"></i>
+                    </div>
+                   </div>
+                    
+
+            </div>
+            <div class="col-12 col-lg-3" id="thongtinhuuich">
+                <h5 class="mt-2">Thông tin hữu ích</h5>
+                <div class="thongtinhuuich mt-4 d-flex flex-column gap-1">
+                  <div>
+                    <i class="fa-solid fa-screwdriver-wrench fs-5"></i>
+                    <a href="#" class="ms-3">Trung tâm bảo hành</a>
+                  </div>
+                  <hr>
+                  <div>
+                    <i class="fa-solid fa-truck"></i>
+                    <a href="#" class="ms-3">Thông tin vận chuyển</a>
+                  </div>
+                  <hr>
+                  <div>
+                    <i class="fa-solid fa-credit-card"></i>
+                    <a href="#" class="ms-3">Hướng dẫn thanh toán</a>
+                  </div>
+                </div>
+                <div class="chat py-5">
+                    <h6 class="fw-bold">Chat với chúng tôi</h6>
+                  <div class="d-flex">
+                    <div class="d-flex gap-2">
+                        <i class="fa-brands fa-facebook-messenger text-primary fs-4"></i>
+                        <a href="#" class="text-danger fw-bold">Boronco Web</a>
+                    </div>
+                        <div class="d-flex gap-2">
+                        <i class="fa-solid fa-phone  text-primary fs-4 ms-4"></i>
+                        <a href="#" class="text-danger fw-bold">0368741625</a>
+                    </div>     
+                </div>
+            </div> 
+        </div>
+
+        <div class="row pt-5">
+            <div class="col-12 col-lg-6 col-xxl-5">
+                <h6 class="fw-bold fs-6 pb-3">THÔNG SỐ KỸ THUẬT</h6>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="w-25">Kích thước màn hình</td>
+                            <td class="w-75">6.7 inches</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Độ phân giải màn hình</td>
+                            <td class="w-75">1284 x 2778 pixels</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Loại màn hình</td>
+                            <td class="w-75">Super Retina XDR OLED, HDR10, Dolby Vision, Wide color gamut, True-tone</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Bộ nhớ trong</td>
+                            <td class="w-75">128 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Chipset</td>
+                            <td class="w-75">Snapdagon 1064 (4 nm)</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Kích thước</td>
+                            <td class="w-75">160.8 x 78.1 x 7.4 mm</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Trọng lượng</td>
+                            <td class="w-75">228g</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="cauhinh">Xem cấu hình chi tiết</button>
+            </div>
+            <div class="col-12 col-lg-4 col-xxl-5" id="daphop">
+                <h6 class="fw-bold fs-6 ms-1 pb-3">VIDEO ĐẬP HỘP</h6>
+                <iframe width="500" height="414" src="https://www.youtube.com/embed/XAZH5Qwwy4M" title="Samsung Galaxy S22 Ultra Unboxing - ASMR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+           <div class="col-12 ">
+            <button class="mt-5" id="mota">Mô Tả</button><br><br>
+           <span class="mt-4 fs-6"> Cho dù dòng sản phẩm Xiaomi Mi Series đã trải qua rất nhiều thế hệ cũng rất nhiều sản phẩm, thế nhưng có thể thấy Mi 10T Pro 5G chính là chiếc điện thoại toàn diện nhất từ trước đến nay. Xiaomi Mi 10T
+             Pro 5G chắc chắn sẽ là một siêu phẩm cấu hình có mức giá ấn tượng nhất của Xiaomi được ra mắt trong năm 2020.
+           </span><br> <br>        
+             <span>Thiết kế nguyên bản camera liền cạnh đẳng cấp <br> <br>      
+
+                Mi 10T Pro 5G được Xiaomi thiết kế theo dạng nguyên khối cực kì sang trọng và cầm trên tay mang lại một cảm giác cực kì cao cấp. Việc cả mặt lưng và mặt trước được hoàn thiện từ kinh cường lực Corning Gorilla Glass 5 mang tới cho thiết bị độ bền bỉ cao cũng như trải nghiệm cầm nắm đầm tay. Xiaomi cung cấp cho Mi 10T Pro ba phiên bản màu sắc đó là Cosmic Black
+                 (Đen Vũ Trụ), Lunar Silver (Bạc Ánh Trăng) và Aurora Blue (Xanh Cực Quang). Với việc sở hữu tới 3 biến thể màu sắc sẽ giúp cho người dùng dễ dàng lựa chọn được máy theo như sở thích cá nhân, cá tính và độ tuổi của bản thân</span> <br><br>
+         <div id="textContainer">
+            <span>GXiaomi cũng trang bị cho Mi 10T Pro 5G một màn hình với kích thước lớn lên tới 6.67 inch trên tấm nền IPS LCD cho ra hình ảnh với màu sắc chân thực cùng với góc nhìn siêu rộng. Thêm nữa, độ phân giải của máy cũng đạt mức Full HD+ 1080 x 2400px, hỗ trợ công nghệ HDR
+                 10+ cùng với mật độ điểm ảnh lên tới 395 ppi, tần số quét cao 144Hz, cho khả năng hiển thị sắc nét và mượt mà tới từng cú chạm lướt.</span> <br><br>
+            <span>Công nghệ camera vượt trội nhất từ Samsung<br><br>
+
+                Không chỉ có thiết kế bên ngoài đẳng cấp, chiếc Galaxy S21 Ultra 5G chính hãng còn sở hữu hệ thống camera tiên tiến nhất hiện nay. Mô-đun camera hình chữ nhật chứa bốn cảm biến với một ống kính chính 108MP. Ngoài ra còn có một camera góc siêu rộng 12MP, camera tele siêu rộng 10MP và camera tele kép 10MP.
+                 Hệ thống camera này hỗ trợ chụp ảnh HDR 12 bit với màu sắc phong phú hơn 64 lần và dải động rộng hơn ba lần.</span><br>
+                 <span>Bên cạnh đó, Galaxy S21 Ultra 5G chính hãng còn hỗ trợ thu phóng chuẩn không gian 100X, một ống kính zoom quang học 3X và một ống kính zoom quang học 10X. Bạn thậm chí có thể tạo ra những thước phim chuyên nghiệp với tính năng quay video 4K ở tốc độ 60 khung hình/giây. Cảm biến chụp đêm đã được cải tiến để giảm nhiễu và bắt được nhiều ánh sáng hơn. 
+                    Công nghệ Nona-binning 12MP được kết hợp mang đến những bức ảnh sắc nét với chất lượng tuyệt vời. Ngoài ra, nó còn có một camera selfie 40MP để hoàn thiện trải nghiệm chụp hình cho người dùng.</span><br><br>
+            <span>Kết nối cực nhanh, tương thích cực đỉnh với S Pen<br><br>
+
+                Samsung Galaxy S21 Ultra 5G chính hãng là phiên bản duy nhất trong 3 biến thể tương thích với bút S Pen tiêu chuẩn. Nó có thể hỗ trợ các trải nghiệm từ vẽ, ghi chú, chỉnh sửa hình ảnh đến chụp ảnh selfie chỉ với thao tác cực đơn giản. Nhờ công nghệ từ Wacom, người dùng có thể trải 
+                nghiệm bút S Pen yêu thích ngay trên chiếc Galaxy S21 Ultra này. Khác với Galaxy Note, chiếc Galaxy S21 Ultra 5G chính hãng không có khe cắm riêng cho bút S Pen. Thay vào đó bạn có thể mua đựng chiếc bút S Pen trong một cover bán cùng máy và lấy ra sử dụng rất dễ dàng.</span> <br><br>
+            <span>Những năm qua, Samsung vẫn đang nỗ lực nghiên cứu để phát triển tốc độ kết nối trên những chiếc smartphone của mình. Samsung Galaxy S21 Ultra 5G tự hào là một trong những điện thoại thông minh đầu tiên hỗ trợ Wi-Fi 6E. Nhờ được cung cấp nhiều băng thông hơn, kết nối Internet trên chiếc smartphone này nhanh hơn gấp 4 lần, người dùng có thể chia sẻ các nội dung chỉ trong nháy mắt. So với dòng Galaxy S20 
+                series, kết nối mạng 5G trên Galaxy S21 Ultra 5G đã được cải thiện đáng kể. Nó đã giảm độ trễ kết nối xuống mức thấp nhất, cho người dùng trải nghiệm trực tuyến mượt mà hơn. Điện thoại Galaxy S21 Ultra 5G được trang bị con chip Exynos 2100 5nm mạnh mẽ và tiết kiệm năng lượng hơn. Nó cũng đi kèm với viên pin 5000mAh có thể sạc đầy 50% chỉ trong 30 phút.</span>
+         </div>
+
+         <button id="toggleButton" class="mt-3">Xem thêm</button>
+           </div>     
+        </div>
+     </div>
+
+   </section>
+            <!--Maincontent-->
+
+
+
+            <section class="footer bg-dark text-white pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <h6><b>THÔNG TIN LIÊN HỆ</b></h6><br>
+                            <h8><b>Tên công ty</b></h8><br>
+                             <span>Công ty TNHH ND Mall</span><br> <br>
+                             <h8><b>Địa chỉ</b></h8><br>
+                             <span>Tòa nhà Ladeco, 266 Đội Cấn, Ba Đình, Hà Nội</span><br><br>
+                             <h8><b>Email</b></h8><br>
+                             <span>support@sapo.vn</span><br> <br>
+                             <h8><b>Hotline</b></h8><br>
+                             <span>19006758</span><br> <br>
+                             <h8><b>Thời gian hỗ trợ</b></h8><br>
+                             <span>08:30-21:30 các ngày trong tuần</span><br> <br>
+                        </div>
+                        <div class="col-2">
+                             <div class="huongdan">
+                                <h6><b>HƯỚNG DẪN</b></h6><br>
+                            <a href="trangchu.html">Trang chủ</a><br><br>
+                            <a href="gioithieu.html">Giới thiệu</a><br><br>
+                            <a href="sanpham.html">Sản phẩm</a><br><br>
+                            <a href="yeuthich.html">Yêu thích</a><br><br>
+                            <a href="lienhe.html">Liên hệ</a><br><br>
+                            <a href="hethongcuahang.html">Hệ thống cửa hàng</a><br><br> 
+                            <a href="affiliate.html">Đăng ký Affiliate</a>
+                             </div> 
+                    </div>
+                    <div class="col-3">
+                       <div class="chamsockhachhang">
+                        <h6><b>CHĂM SÓC KHÁCH HÀNG</b></h6><br>
+                        <a href="#">Các câu hỏi thường gặp</a><br><br>
+                        <a href="#">Gửi yêu cầu hỗ trợ</a><br><br>
+                        <a href="#">Đặt hàng online</a><br><br>
+                        <a href="#">Phương thức vận chuyển</a><br><br>
+                        <a href="#">Hoàn trả đơn hàng</a><br><br>
+                        <a href="#affiliate">Đăng ký Affiliate</a><br><br>
+                        <a href="#">Chính sách kiểm hàng</a>
+                       </div>
+                    </div>
+                    <div class="col-3">
+                        <h6><b>KẾT NỐI</b></h6><br>
+                        <div class="social-media fs-3">
+                            <a href="#" class="me-3"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-google"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-youtube"></i></a> 
+                          </div>
+                          <br><br>
+                        <h6><b>TẢI ỨNG DỤNG ND MALL</b></h6><br>
+                        <img src="images_2/taiungdungndmall.png" id="taiungdung">
+                        <img src="images_2/img-app-store.png" id="taiungdung">
+                    </div>
+                </div>
+                <hr>
+                    <div class="container d-flex align-items-center">
+                        <span>@ Bản quyền thuộc về ND Theme | Cung cấp bởi Sapo</span>
+                        <span class="ms-auto"><img src="images_2/NDmall.png"></span>
+                    </div>
+            
+               </section>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="assets/vendors/jquery.min.js"></script>
+   <script src="assets/owlcarousel/owl.carousel.js"></script>
+   <script src="main_2.js"></script>
+   <script>
+    // Set the default value to 1
+    document.getElementById('soluong').value = 1;
+
+    // Get the elements
+    const decreaseButton = document.getElementById('giam');
+    const increaseButton = document.getElementById('tang');
+    const quantityInput = document.getElementById('soluong');
+
+    // Event listener for decrease button
+    decreaseButton.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    // Event listener for increase button
+    increaseButton.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue + 1;
+    });
+
+    const toggleButton = document.getElementById('toggleButton');
+    const textContainer = document.getElementById('textContainer');
+
+    let isCollapsed = true;
+
+    toggleButton.addEventListener('click', function() {
+        if (isCollapsed) {
+            textContainer.classList.add('expanded');
+            toggleButton.textContent = 'Thu gọn';
+            isCollapsed = false;
+        } else {
+            textContainer.classList.remove('expanded');
+            toggleButton.textContent = 'Xem thêm';
+            isCollapsed = true;
+        }
+    });
+</script>
+</body>
+
+</html>

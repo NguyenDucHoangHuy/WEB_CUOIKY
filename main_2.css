@@ -1,0 +1,286 @@
+*{  
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline:none;
+    scroll-behavior: smooth;
+    font-family: "Nunito", sans-serif;
+}
+html{   
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+.header .form-control{
+   height:6vh;
+}
+  
+.header a{
+    color:aliceblue;
+}
+.header li .dropdown-item{
+    color:black;
+}
+.header li .dropdown-item:hover{
+    color:red;
+}
+.header li .dropdown-item:active{
+    background-color: aliceblue;
+}
+
+.header .navbar a:hover{
+      color:rgb(238, 238, 40);
+}
+.footer a{
+    color:white;
+}
+.footer .huongdan a:hover,
+.footer .chamsockhachhang a:hover {
+    color: red;
+}
+.footer .social-media a:hover{
+    color:white;
+    opacity: 0.7;
+}
+#dropdown-menu{
+    width:13vw;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+#dropdown-menu a{
+ color:black; 
+}
+#dropdown-menu a:hover{
+    color:orange;
+   }
+#icon-header:hover{
+    opacity: 0.6 ;
+}
+#daumuc{
+    height:3rem;
+    width:13.5rem;
+    background-color: rgb(254, 64, 64);
+    color:white;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:0.6rem;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+}
+#duongke{
+    border: 0.15rem solid rgb(254, 64, 64);
+    margin: top -0.4rem;
+}
+#tencuasanpham{
+    text-align: center;
+    color:black;
+}
+#giatien{
+    color:rgb(254, 64, 64);
+}
+#giatiengoc{
+    color:grey;
+    text-decoration: line-through;
+    
+}
+.box img{
+    transition: transform 0.3s ease;
+}
+.box:hover img{
+    transform: scale(1.05);
+}
+.box:hover i{
+    color:rgb(254, 64, 64);
+}
+.box #tym{
+        position: absolute;
+        top:0;
+        right:1.2rem;
+        color:white;
+        transition: opacity 0.3s ease;
+        background-color: rgb(237, 64, 64);
+        font-size:1.65rem;
+        border-radius: 0.4rem;
+        height:2.4rem;
+        width:3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       display: none;
+}
+
+.box:hover #tym{
+    display: flex;
+}
+#tym:hover{
+         opacity: 0.85;
+}
+#giohang:hover{
+    opacity: 0.6;
+}
+#cardtintuc:hover #tieudetintuc{
+    color:orange;
+}
+#cardtintuc img{
+    transition: 0.3s ease;
+}
+#cardtintuc:hover img{
+    transform: scale(1.05);
+}
+#dropleftmenu{
+    position: fixed;
+    left:0;
+    top:0;
+    width:18rem;
+    height:100%;
+    list-style-type: none; 
+    background-color: white;
+   display: none;
+   z-index: 999;
+   animation: slideIn 0.3s forwards; 
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);  
+    }
+    to {
+        transform: translateX(0);  
+    }
+}
+#dropleftmenu span{
+    font-weight: 700;
+}
+#dropleftmenu span:hover{
+    color:red;
+}   
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền trong suốt */
+    z-index: 997; /* Giá trị z-index thấp hơn dropleft để hiển thị phía sau dropleft */
+}
+#tintucmoinhat #cardtintuc .card-text{
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Số dòng tối đa */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Hiển thị dấu chấm (...) khi nội dung được cắt bớt */
+   
+}
+#tintucmoinhat #cardtintuc h5{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Số dòng tối đa */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size:1.1rem;
+}
+ 
+@media (max-width:1399px) {
+        #khuvucdienthoai .box img{
+            width: 100%;
+            height: auto;
+        }
+        #khuvucdienthoai .box #giohang{
+            margin-left: 7.5rem !important;
+        }
+}
+@media (max-width:992px){
+        #khuvucdienthoai .box img{
+            width:10rem;
+        }
+}
+@media (width: 768px) {
+    #khuvucdienthoai .container.d-flex.gap-3{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap:10rem !important;
+    }
+}
+@media (max-width: 768px) {
+    #khuvucdienthoai .box #giohang{
+        margin-left: 11.5rem !important;
+    }
+    #khuvucdienthoai img{
+        width:15rem !important;
+    }
+    #khuvucdienthoai .container.d-flex.gap-3{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    #khuvucthoitrang .container.d-flex.gap-4{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #tintucmoinhat .col {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Cho hiệu ứng scroll mượt mà trên iOS */
+    }
+    #tintucmoinhat .card {
+        width: 20rem !important;  
+    }
+
+    #tintucmoinhat .col a {
+        margin-right: 12rem ;  
+    }
+}
+@media (max-width:1199px){
+    #khuvucthoitrang .box img{
+        width:100%;
+        height:13rem;
+    }
+    #khuvucthoitrang .box #giohanglech{
+        position: absolute;
+        margin-top: 0.4rem;
+        margin-left:-1.3rem;
+    }
+    #khuvucthoitrang .box #giohanglech1{
+        position: absolute;
+        margin-top: -1.1rem;
+        margin-left:2rem;
+    }
+}
+@media (max-width:992px){
+    #khuvucthoitrang .box #giohanglech1{
+        position: absolute;
+        margin-top: 0.31rem;
+        margin-left:-1rem;
+    }
+   
+}
+@media (max-width:530px) {
+    .footer #taiungdung{
+        width:100% !important;
+    }
+}
+@media (max-width:460px){
+    #khuvucdienthoai .box {
+       width:50% !important;
+       height:auto;
+    }
+    #khuvucdienthoai .box img {
+        width:190% !important;
+        height:auto;
+     }
+    #khuvucdienthoai #giohangdienthoai{
+        margin-left:-3rem !important;
+        margin-top: 1.6rem !important;
+    }
+    #khuvucdienthoai .box .tencuasanpham{
+        display: block;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    #khuvucdienthoai .box #giohangdienthoai{
+        margin-left:-3rem !important;
+    }
+}
+

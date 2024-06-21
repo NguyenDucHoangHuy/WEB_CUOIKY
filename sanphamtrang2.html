@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main_2.css"> 
+    <link rel="icon" href="../Portfolio/images/icon1.png">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+    <title>Sản phẩm</title>
+    <style>
+        .danhmucsanpham a{
+            color:black;
+            padding-left:1rem;   
+        }
+        .danhmucsanpham a:hover{
+            background-color: rgb(247, 153, 1);
+            color:white;
+        }
+        .tienich button{
+            background-color: rgb(254, 64, 64);
+            padding:0.5rem;
+            color:white;
+        }
+        .tienich button:hover{
+            background-color:rgb(247, 153, 1) ;
+        }
+        #dichuyentrang button{
+            width:2.3rem;
+            height:2.3rem;
+            border:0.001rem solid grey;
+        }
+        #dichuyentrang button:hover{
+            color:white;
+            background-color: rgb(247, 153, 1) ;
+        }
+        #button2{
+            background-color: rgb(247, 153, 1);
+            color:white;
+        }
+        @media (max-width:1399px) {
+            .product-page .container .box img{
+                width:15rem;
+                height:auto;
+            }
+        }
+        @media (max-width:1199px) {
+            .product-page .container .box img{
+                width:12rem;
+                height:auto;
+            }
+        }
+        @media (max-width:1198px) {
+            .product-page .container .box #giohang{
+                display: none;
+            }
+            .product-page .container .box .chinhtien{
+                position: absolute;
+                margin-top:-1.5rem !important;
+            }
+            .product-page .container .box .chinhtien2{
+                position: absolute;
+                margin-top:1.5rem !important;
+            }
+        }
+        @media (max-width:992px) {
+            .tienich{
+                margin-left: -7rem !important;
+            }
+             .product-pages{
+              margin-left:-10rem !important;
+            }
+            .modau h5{
+                text-align: center;
+            }
+            .product-page img{
+                width:5rem;
+                height: auto;
+            }
+        }
+        @media (max-width:830px) {
+            .tienich{
+                font-size:0.85rem;
+                margin-left:-1rem !important;
+            }
+            .product-page .container .box img{
+              width: 10.5rem;
+            }
+            .product-pages{
+                margin-left: -5rem !important;
+            }
+        }
+        @media (width:768px){
+            .tienich{
+                font-size:0.8rem;
+                margin-left:-1rem !important;
+            }
+            .product-page .container .box img{
+              width: 10rem;
+            }
+            .product-pages{
+                margin-left: -4rem !important;
+            }
+            #tencuasanpham{
+                font-size: 0.8rem !important;
+            }
+        }
+           
+        @media (max-width:767.5px) {
+            .product-page .container{
+                display: grid !important;
+                grid-template-columns: repeat(2,1fr);
+                margin-left: 3.8rem !important;
+            }
+            
+            .tienich{
+                margin-left: -0.7rem !important;
+            }
+            #dichuyentrang{
+                display: flex !important;
+            }
+            #tencuasanpham{
+                font-size:0.8rem;
+            }
+        }
+        @media (max-width:618px) {
+            .product-pages{
+                margin-left: -6rem !important;
+            }
+            .box:hover #tym{
+            display: none;
+            }
+        }
+        @media (max-width:576px){
+            .product-pages{
+                 
+                margin-left: -7rem !important;
+            }
+            .tienich{
+                font-size: 0.8rem;
+                margin-left: -3rem !important;
+             
+            }
+            .modau p{
+                font-size:0.8rem;
+                margin-left: -3rem !important;
+            }
+            .modau h5{
+                margin-left: -5rem !important;
+                font-size: 0.85rem;
+            }
+            .product-page .container .box #tencuasanpham {
+                display: block;
+                width: 60%; /* Giới hạn chiều rộng của phần tử chứa tên sản phẩm */
+                word-wrap: break-word; /* Cho phép ngắt từ nếu cần */
+                overflow-wrap: break-word; /* Ngắt từ khi quá dài */
+                font-size: 0.9rem; /* Điều chỉnh kích thước chữ để tránh tràn khung */
+    }
+            .product-page .container .box img {
+                width: 70%; /* Đảm bảo hình ảnh co dãn theo chiều rộng của box */
+                height: auto;
+            }
+            #tencuasanpham{
+                font-size:0.55rem;
+            }
+            #dichuyentrang{
+                margin-left: -7.6rem !important;
+            }
+}
+      
+    </style>
+</head>
+<body>
+    <section class="header bg-danger text-white">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-2 col-sm-3 pb-4 d-flex justify-content-center">
+                    <a href="trangchu.html">
+                        <img src="images_2/NDmall.png" class="img-fluid " alt="Logo">
+                    </a>
+                </div>
+                <div class="col-xl-2 col-lg-3 d-lg-flex d-none">
+                    <a href="hethongcuahang.html" id="icon-header">
+                        <i class="fa-solid fa-shop"></i>
+                     <span >Hệ thống cửa hàng<br><b class="fs-5">40 cửa hàng</b></span>
+                    </a>
+                </div>
+                <div class="col-xxl-5 col-xl-4 col-lg-3 col-sm-9">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..." 
+                        aria-label="Tìm kiếm sản phẩm..." aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+                      </div>
+                </div>
+                <div class="col-xxl-3 col-lg-4 d-lg-flex d-none align-items-center gap-3">
+                    <a href="yeuthich.html" class="position-relative" id="icon-header" >
+                        <span class="fs-4 ms-4"><i class="fa-regular fa-heart"></i></span><br>
+                        <span>Yêu thích</span>
+                    </a>
+
+                    <a href="dangnhap.html" >
+                        <div class="dropdown"  id="icon-header">
+                            <a class="dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="fs-4 ms-4"><i class="fa-regular fa-user"></i></span><br>
+                                <span>Tài khoản</span>
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="dangnhap.html">Đăng nhập</a></li>
+                                <li><a class="dropdown-item" href="dangky.html">Đăng ký</a></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="giohang.html" class="position-relative" id="icon-header">
+                        <span class="fs-4 ms-3"><i class="fa-solid fa-bag-shopping"></i></span>
+                       <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                         0
+                         <span class="visually-hidden">unread messages</span>
+                       </span><br>
+                       <span>Giỏ hàng</span>
+                     </a>
+
+                </div>
+            </div>
+        </div>
+         <hr> 
+         <div class="container">
+            <div class="row d-none d-lg-flex">
+                <div class="col">
+                    <nav class="navbar">
+                        <a href="trangchu.html" class="active">Trang chủ</a>
+                        <a href="gioithieu.html">Giới thiệu</a>
+                        <div class="dropdown">
+                        <a class="dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"  href="sanpham.html">
+                            <span> Sản phẩm </span>
+                        </a>
+                            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a href="sanpham.html">Điện thoại-Máy tính bảng</a></li><hr>
+                                <li><a href="sanpham.html">Phụ kiện-Thiết bị số</a> </li><hr>
+                                <li><a href="sanpham.html">Máy ảnh-Quay phim</a> </li><hr>
+                                <li><a href="sanpham.html">Điện gia dụng-Nhà bếp</a> </li><hr>
+                                <li><a href="sanpham.html">Laptop-Thiết bị IT</a> </li><hr>
+                                <li><a href="sanpham.html">Máy chơi game-Trò chơi</a> </li><hr>
+                                <li><a href="sanpham.html">Trang sức-Sành điệu</a> </li><hr>
+                                <li><a href="sanpham.html">Thời trang-Làm đẹp</a> </li><hr>
+                                <li><a href="sanpham.html">Nhà cửa đời sống</a> </li><hr>
+                                <li><a href="sanpham.html">Sách-Tiểu thuyết</a> </li>
+                            </ul>
+                        </div></a>
+                        <a href="yeuthich.html">Yêu thích</a>
+                        <a href="lienhe.html">Liên hệ</a>
+                        <a href="hethongcuahang.html">Hệ thống cửa hàng</a>
+                        <a href="affiliate.html">Đăng ký Affiliate</a>
+                    </nav>
+                </div>
+            </div>
+         </div>
+           
+             <div class="row px-5 py-3  fixed-bottom bg-danger d-flex d-lg-none" style="height: 6vh;">
+                <div class="col-3">
+                    <i class="fa-solid fa-bars fs-4" id="menu-icon"></i>
+                </div>
+               <div class="col-6 d-flex justify-content-between">
+                <a href="yeuthich.html">
+                    <i class="fa-regular fa-heart fs-4"></i>
+                </a>
+               <a href="hethongcuahang.html">
+                <i class="fa-solid fa-shop fs-4"></i>
+               </a>
+               <a href="dangnhap.html">
+                <i class="fa-regular fa-user fs-4"></i>
+               </a>
+               </div>
+                <div class="col-3 d-flex justify-content-end">
+                   <a href="#"> <i class="fa-solid fa-bag-shopping fs-4"></i></a>
+                </div>
+           </div>
+
+           <div class="dropleftmenu" id="dropleftmenu">
+            <ul>
+            <li><a href="trangchu.html" class="text-dark fs-6"><span>Trang chủ</span></a></li><br>
+            <li><a href="gioithieu.html" class="text-dark fs-6"><span>Giới thiệu</span></a> </li><br>
+            <li><a href="sanpham.html" class="text-dark fs-6"><span>Sản phẩm</span></a> </li><br>
+            <li><a href="yeuthich.html" class="text-dark fs-6"><span>Yêu thích</span></a> </li><br>
+            <li><a href="lienhe.html" class="text-dark fs-6"><span>Liên hệ</span></a> </li><br>
+            <li><a href="hethongcuahang.html" class="text-dark fs-6"><span>Hệ thống cửa hàng</span></a></li><br>
+            <li><a href="dangky.html" class="text-dark fs-6"><span>Đăng ký Affiliate</span></a></li>
+            </ul>
+           </div>
+   </section>
+ 
+            <!--Header-->
+
+
+   <section class="maincontent py-2">
+             <div id="trangchu" class="content">
+                <div class="container pt-3">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="row">
+                                <span class="">Trang chủ 
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <span class="text-danger"> Tất cả sản phẩm</span> 
+                                </span> 
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+           <div class="container pt-2 pb-3">
+                <div class="row">
+                    <div class="col-xxl-3 col-1 d-xxl-table d-none">
+                       <h1 class="fs-5 fw-bold ">Danh mục sản phẩm</h1>
+                       <div class="danhmucsanpham d-flex flex-column gap-3">
+                        
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_1.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Điện thoại-Máy tính bảng</h4>
+                      </a>
+                      
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_2.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Phụ kiện-Thiết bị số</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_3.png" style="width:2.5rem !important;">
+                         <h4 class="fs-6 mt-3 ms-2">Máy ảnh-Quay phim</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_4.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Điện gia dụng-Nhà bếp</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_5.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Laptop-Thiết bị IT</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_6.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Máy chơi game-Trò chơi</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_7.png" style="width:2.5rem !important;">
+                         <h4 class="fs-6 mt-3 ms-2">Trang sức-Sành điệu</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_8.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Thời trang-Làm đẹp</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_9.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Nhà cửa đời sống</h4>
+                      </a>
+
+                      <a href="item" class="d-flex">
+                        <img src="images_2/cate_list_10.png" style="width:2.5rem !important;">
+                        <h4 class="fs-6 mt-3 ms-2">Sách-Tiểu thuyết</h4>
+                      </a>
+                       </div>
+                    </div>
+                    <div class="col-xxl-9 col-11 ms-5 ms-xxl-0">
+                        <div class="modau">
+                            <h5 class="fw-bold">TẤT CẢ SẢN PHẨM</h5>
+                            <p>Ở đây chúng tôi có rất nhiều sản phẩm đáp ứng cho nhu cầu thiết yếu của khách hàng, với phương châm bán hàng chất lượng gặt hái thành công, mọi thông tin thắc mắc xin gửi
+                         về <b>support@sapo.vn</b> hoặc qua số điện thoại <b>19006758</b> để được hỗ trợ giải đáp thắc mắc về sản phẩm. Chúng tôi hy vọng đem lại lợi ích cho khách hàng nhiều hơn qua từng sản phẩm.</p>
+                        </div>
+                        <div class="tienich d-flex">
+                            <button>Tên A-Z</button>
+                            <button>Tên Z-A</button>
+                            <button>Giá thấp đến cao</button>
+                            <button>Giá cao xuống thấp</button>   
+                        </div>
+                         <div class="product-pages active">
+                            <div class="product-page">
+                                <div class="container py-4 d-flex gap-4">
+                                    <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/nike1.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>Nike giày thể thao unisex K0BW5MQG</b></span> <br> <br>
+                                            <span id="giatien"><b>3.300.000₫</i></b></span><br>
+                                             <span id="giatiengoc"></span> 
+                                             <span class="fs-3" style="margin-left: 11rem;" id="giohang"><i class="fa-solid fa-cart-shopping" class="pb-2" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div> 
+                                
+                                    <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/nike2.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>Kappag giày thể thao unisex K0BW5MQ01 09x0</b></span> <br> <br>  
+                                            <span id="giatien"><b>4.500.000₫</i></b></span><br>
+                                             <span id="giatiengoc"> </span> 
+                                             <span class="fs-3" style="margin-left: 11rem;" id="giohang"><i class="fa-solid fa-cart-shopping" class="pb-2" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div> 
+                                
+                                    <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/nike3.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>Kappag giày thể thao unisex K0BW5MQ01 030</b></span> <br> <br> 
+                                            <span id="giatien"><b>100.000₫</i></b></span><br>
+                                             <span id="giatiengoc">180.000₫</span> 
+                                             <span class="fs-3" style="margin-left: 7rem;" id="giohang"><i class="fa-solid fa-cart-shopping" class="pb-2" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div> 
+                                
+                                    <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/nike4.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>Kappa giày thể thao nam K0A55MQ43 124</b></span> <br> <br>
+                                            <span id="giatien"><b>20.000₫</i></b></span><br>
+                                             <span id="giatiengoc"></span> 
+                                             <span class="fs-3" style="margin-left: 11rem;" id="giohang"><i class="fa-solid fa-cart-shopping" class="pb-2" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="container d-flex gap-4">
+                                    <div class="box  position-relative">
+                                        <a href="samsunggalaxynote21.html">
+                                         <img src="images_2/dien-thoai-samsung-galaxy-s21-ultra-5g.png" class="pb-2"> <br>
+                                         <span id="tencuasanpham"><b>Samsung Galaxy Note 21</b></span> <br> <br>
+                                         <span id="giatien"><b>29.000.000₫</i></b></span><br>
+                                          <span id="giatiengoc">30.500.000₫</span> 
+                                          <span class="fs-3" style="margin-left: 6rem;" id="giohang"><i class="fa-solid fa-cart-shopping" id="giohangdienthoai"></i></span>
+                                          <i class="fa-regular fa-heart" id="tym"></i>
+                                        </a>
+                                     </div> 
+                                
+                                     <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/apple-iphone-12-mini-2-0340d148-dd79-40b3-b8ad-95ed589c7b5a.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>Apple iPhone 12 Mini New</b></span> <br> <br>
+                                            <span id="giatien"><b>26.000.000₫</i></b></span><br>
+                                             <span id="giatiengoc">30.500.000₫</span> 
+                                             <span class="fs-3" style="margin-left: 6rem;" id="giohang"><i class="fa-solid fa-cart-shopping" class="pb-2" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div> 
+                                
+                                    <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/iphone-12-pro-max-xanh-561e05b7-eed5-40c8-9065-49b5a1cea423.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>iPhone 12 Pro Max Like New</b></span> <br> <br>
+                                            <span id="giatien"><b>22.000.000₫</i></b></span><br>
+                                             <span id="giatiengoc">32.000.000₫</span> 
+                                             <span class="fs-3" style="margin-left: 6rem;" id="giohang"><i class="fa-solid fa-cart-shopping" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div> 
+                                
+                                    <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/iphone-xr-mau-vang-didongviet-1-1-2.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>iPhone XR - Vàng Ròng New </b></span> <br> <br>
+                                            <span id="giatien"><b>8.000.000₫</i></b></span><br>
+                                             <span id="giatiengoc">10.500.000₫</span> 
+                                             <span class="fs-3" style="margin-left: 6rem;" id="giohang"><i class="fa-solid fa-cart-shopping" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div> 
+                                </div>
+                                
+                                <div class="container py-4 d-flex gap-4">
+                                    <div class="box position-relative">
+                                        <a href="xiaomi5tpro.html">
+                                         <img src="images_2/xiaomi-mi-10t-pro.png" class="pb-2"> <br>
+                                         <span id="tencuasanpham"><b>Xiaomi Mi 10T Pro 5G - No1</b></span> <br> <br>
+                                         <span id="giatien"><b>10.900.000₫</i></b></span><br>
+                                          <span id="giatiengoc">12.500.000₫</span> 
+                                          <span class="fs-3" style="margin-left: 6rem;" id="giohang"><i class="fa-solid fa-cart-shopping" id="giohangdienthoai"></i></span>
+                                          <i class="fa-regular fa-heart" id="tym"></i>
+                                        </a>
+                                     </div> 
+                                
+                                     <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/apple-iphone-12-mini-5.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>iPhone 12 Hàng Quốc Tế </b></span> <br> <br>
+                                            <span id="giatien"><b>26.000.000₫</i></b></span><br>
+                                             <span id="giatiengoc">32.500.000₫</span> 
+                                             <span class="fs-3" style="margin-left: 6rem;" id="giohang"><i class="fa-solid fa-cart-shopping" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a> 
+                                    </div> 
+                                
+                                    <div class="box  position-relative">
+                                        <a href="#">
+                                            <img src="images_2/galaxy-s21-ultra-5g-black-didongviet.png" class="pb-2"> <br>
+                                            <span id="tencuasanpham"><b>Samsung Galaxy S21 Ultra</b></span> <br> <br>
+                                            <span id="giatien"><b>25.000.000₫</i></b></span><br>
+                                             <span id="giatiengoc">27.500.000₫</span> 
+                                             <span class="fs-3" style="margin-left: 6rem;" id="giohang"><i class="fa-solid fa-cart-shopping" id="giohangdienthoai"></i></span>
+                                             <i class="fa-regular fa-heart" id="tym"></i>
+                                           </a>
+                                    </div> 
+                                </div>  
+                                
+                            <div class="container py-4 d-flex justify-content-end gap-2 ms-5" id="dichuyentrang">
+                               <a href="sanpham.html"> <button id="button1"><i class="fa-solid fa-arrow-left"></i></button></a>
+                                <a href="sanpham.html"><button id="button1">1</button></a>
+                                <button id="button2">2</button>
+                            
+                            </div>
+                             </div>
+                         
+                        </div>
+
+                         
+
+
+                    </div>
+                </div>
+           </div>
+
+
+
+                 
+                 </div>
+             
+
+   </section>
+            <!--Maincontent-->
+            
+
+
+            <section class="footer bg-dark text-white pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <h6><b>THÔNG TIN LIÊN HỆ</b></h6><br>
+                            <h8><b>Tên công ty</b></h8><br>
+                             <span>Công ty TNHH ND Mall</span><br> <br>
+                             <h8><b>Địa chỉ</b></h8><br>
+                             <span>Tòa nhà Ladeco, 266 Đội Cấn, Ba Đình, Hà Nội</span><br><br>
+                             <h8><b>Email</b></h8><br>
+                             <span>support@sapo.vn</span><br> <br>
+                             <h8><b>Hotline</b></h8><br>
+                             <span>19006758</span><br> <br>
+                             <h8><b>Thời gian hỗ trợ</b></h8><br>
+                             <span>08:30-21:30 các ngày trong tuần</span><br> <br>
+                        </div>
+                        <div class="col-2">
+                             <div class="huongdan">
+                                <h6><b>HƯỚNG DẪN</b></h6><br>
+                            <a href="trangchu.html">Trang chủ</a><br><br>
+                            <a href="gioithieu.html">Giới thiệu</a><br><br>
+                            <a href="sanpham.html">Sản phẩm</a><br><br>
+                            <a href="yeuthich.html">Yêu thích</a><br><br>
+                            <a href="lienhe.html">Liên hệ</a><br><br>
+                            <a href="hethongcuahang.html">Hệ thống cửa hàng</a><br><br> 
+                            <a href="affiliate.html">Đăng ký Affiliate</a>
+                             </div> 
+                    </div>
+                    <div class="col-3">
+                       <div class="chamsockhachhang">
+                        <h6><b>CHĂM SÓC KHÁCH HÀNG</b></h6><br>
+                        <a href="#">Các câu hỏi thường gặp</a><br><br>
+                        <a href="#">Gửi yêu cầu hỗ trợ</a><br><br>
+                        <a href="#">Đặt hàng online</a><br><br>
+                        <a href="#">Phương thức vận chuyển</a><br><br>
+                        <a href="#">Hoàn trả đơn hàng</a><br><br>
+                        <a href="#affiliate">Đăng ký Affiliate</a><br><br>
+                        <a href="#">Chính sách kiểm hàng</a>
+                       </div>
+                    </div>
+                    <div class="col-3">
+                        <h6><b>KẾT NỐI</b></h6><br>
+                        <div class="social-media fs-3">
+                            <a href="#" class="me-3"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-google"></i></a>
+                            <a href="#" class="me-3"><i class="fa-brands fa-youtube"></i></a> 
+                          </div>
+                          <br><br>
+                        <h6><b>TẢI ỨNG DỤNG ND MALL</b></h6><br>
+                        <img src="images_2/taiungdungndmall.png" id="taiungdung">
+                        <img src="images_2/img-app-store.png" id="taiungdung">
+                    </div>
+                </div>
+                <hr>
+                    <div class="container d-flex align-items-center">
+                        <span>@ Bản quyền thuộc về ND Theme | Cung cấp bởi Sapo</span>
+                        <span class="ms-auto"><img src="images_2/NDmall.png"></span>
+                    </div>
+            
+               </section>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="assets/vendors/jquery.min.js"></script>
+   <script src="assets/owlcarousel/owl.carousel.js"></script>
+   <script src="main_2.js"></script>
+   
+</body>
+
+</html>
+
+
+
+
